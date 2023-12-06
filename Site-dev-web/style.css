@@ -1,67 +1,61 @@
-.root {
-    .Açaí-1-hex {
-        color: #401E31;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */
 
-    .Açaí-2-hex {
-        color: #734960;
-    }
+:root {
+    --fonte: 'Montserrat', sans-serif;
+    --acai1: #401E31;
+    --acai2: #734960;
+    --acai3: #361A2B;
+    --acai4: #452032;
+    --acai5: #27161E;
+}
 
-    .Açaí-3-hex {
-        color: #361A2B;
-    }
+/* --preto: hsla(204, 97, 0, 1);
+   
 
-    .Açaí-4-hex {
-        color: #452032;
-    }
-
-    .Açaí-5-hex {
-        color: #27161E;
-    }
-
-    preto {
-        color: hsla(204, 97, 0, 1);
-    }
-
-    .G-GREY-500-900-1-hsla {
+    --G-GREY-500-900-1-hsla {
         color: hsla(0, 0, 12, 1);
     }
 
-    .G-GREY-500-900-2-hsla {
+    --G-GREY-500-900-2-hsla {
         color: hsla(0, 0, 25, 1);
     }
 
-    .G-GREY-500-900-3-hsla {
+    --G-GREY-500-900-3-hsla {
         color: hsla(0, 0, 38, 1);
     }
 
-    .G-GREY-500-900-4-hsla {
+    --G-GREY-500-900-4-hsla {
         color: hsla(0, 0, 45, 1);
     }
 
-    .G-GREY-500-900-5-hsla {
+    --G-GREY-500-900-5-hsla {
         color: hsla(0, 0, 61, 1);
     }
 
-}
+} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(Montserrat);
+    font-family: var(--fonte);
 }
 
 header {
     background-color: #401E31;
     margin: 0;
     padding: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 header ul {
     position: relative;
     display: flex;
     gap: 30px;
+    margin-left: 26px;
 }
 
 header ul li {
@@ -72,7 +66,7 @@ header ul li a {
     position: relative;
     text-decoration: none;
     font-size: 1em;
-color: white;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -124,11 +118,132 @@ header {
     height: 150px;
     width: 400px;
     margin-top: 50px;
-margin-left: 450px;
+    margin-left: 450px;
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap');
-/* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'Montserrat', sans-serif; */
+/* seja um franqueado */
+
+.titulo {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: var(--acai3);
+    font-size: 26px;
+}
+
+.text {
+    text-align: center;
+    width: 70%;
+    margin: -10px auto 15px auto;
+    font-weight: 600;
+    color: var(--acai-3);
+}
+
+/* tipos de loja */
+
+.section2 {
+    padding: 40px;
+}
+
+.column {
+    background-color: #fff;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+img {
+    width: 400px;
+    height: 260px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.text-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.tituloColumn{
+    color:  var(--acai3);
+    font-weight: bold;
+}
+
+.textoColumn{
+    color: black;
+}
+
+
+.row-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    gap: 25px;
+    
+}
+
+
+@media (min-width: 768px) {
+    .column {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* forms */
+
+h1 {
+    color: var(--acai4)
+}
+
+p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 110px;
+    background-color: #401E31;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+    margin-top: 150px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.form-content {
+    flex: 1;
+    max-width: 35%;
+    line-height: 8vh;
+    margin-top: 26px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
