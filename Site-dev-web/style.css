@@ -1,7 +1,11 @@
+@charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,100&display=swap');
-/* font-family: 'Montserrat', sans-serif; */
-/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display&family=Poppins:wght@200;300&display=swap');
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif; */
 
 :root {
     --fonte: 'Montserrat', sans-serif;
@@ -10,38 +14,19 @@
     --acai3: #361A2B;
     --acai4: #452032;
     --acai5: #27161E;
+    --cinza: #9c9c9c;
+    --cinzaescuro: #737373;
+    --title-font: 'Poppins', sans-serif;
+
 }
 
-/* --preto: hsla(204, 97, 0, 1);
-   
-
-    --G-GREY-500-900-1-hsla {
-        color: hsla(0, 0, 12, 1);
-    }
-
-    --G-GREY-500-900-2-hsla {
-        color: hsla(0, 0, 25, 1);
-    }
-
-    --G-GREY-500-900-3-hsla {
-        color: hsla(0, 0, 38, 1);
-    }
-
-    --G-GREY-500-900-4-hsla {
-        color: hsla(0, 0, 45, 1);
-    }
-
-    --G-GREY-500-900-5-hsla {
-        color: hsla(0, 0, 61, 1);
-    }
-
-} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fonte);
+    scroll-behavior: smooth;
 }
 
 header {
@@ -122,39 +107,69 @@ header {
 
 }
 
-/* seja um franqueado */
+/*quem somos, section 3*/
+
+.section3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 900px;
+    margin: 40px auto 10px auto;
+}
+
+.section3 h1 {
+    margin-bottom: 8px;
+    font-family: var(--title-font);
+    color: var(--acai3);
+    font-size: 25px;
+}
+
+.section3 img {
+    width: 100%;
+    height: 80%;
+}
+
+.text3 {
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+/* seja um franqueado, section 5 */
 
 .titulo {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 40px;
-    color: var(--acai3);
-    font-size: 26px;
+    font-size: 28px;
+    color: white;
+    font-family: var(--title-font);
 }
 
 .text {
     text-align: center;
     width: 70%;
-    margin: -10px auto 15px auto;
+    font-size: 18px;
+    margin: -10px auto 40px auto;
     font-weight: 600;
-    color: var(--acai-3);
+    color: white;
+    font-weight: 400;
 }
 
 /* tipos de loja */
 
-.section2 {
-    padding: 40px;
+.section4 {
+    padding: 20px;
+    background-color: var(--acai1);
+    color: white;
 }
 
 .column {
-    background-color: #fff;
     margin: auto;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-
 }
 
 img {
@@ -166,18 +181,18 @@ img {
 }
 
 .text-container {
-    background-color: #fff;
     padding: 10px;
     border-radius: 0 0 8px 8px;
 }
 
-.tituloColumn{
-    color:  var(--acai3);
-    font-weight: bold;
+.tituloColumn {
+    color: white;
 }
 
-.textoColumn{
-    color: black;
+.textoColumn {
+    color: white;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 
@@ -185,9 +200,8 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px;
+    padding: 12px;
     gap: 25px;
-    
 }
 
 
@@ -197,53 +211,63 @@ img {
     }
 }
 
-/* forms */
+/* section5 */
 
-h1 {
-    color: var(--acai4)
+.section5 h1 {
+    color: var(--acai4);
+    margin-bottom: 20px;
 }
-
-p {
-    margin-top: 10px;
-    font-weight: 600;
-    color: white;
-}
-
 
 .content-container {
     display: flex;
     justify-content: space-between;
-    margin: 110px;
-    background-color: #401E31;
-    width: 100%;
+    margin: 130px;
 }
 
 .text-content {
     flex: 1;
-    max-width: 60%;
-    margin-top: 150px;
+    max-width: 50%;
+    margin-top: 80px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black
 }
 
 .form-content {
     flex: 1;
     max-width: 35%;
     line-height: 8vh;
-    margin-top: 26px;
+    margin-top: 30px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 30px;
 }
 
 
 input {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    padding: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 10px;
+}
+
+
+button {
+    background-color: var(--acai1);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out
+}
+
+button:hover {
+    background-color: var(--acai3);
+    transform: scale(1.05);
 }
